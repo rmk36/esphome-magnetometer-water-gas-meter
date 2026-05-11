@@ -9,6 +9,8 @@ substitutions:
   volume_unit: 'gal'
   i2c_scl: GPIO5  # D1
   i2c_sda: GPIO4  # D2
+  # i2c clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
+  # i2c_frequency: 10kHz
   # Set to false only if needed during manual calibration.
   # Do not keep them at false since these slow down the ESP device
   # and reduce the accuracy during high flow.
@@ -87,6 +89,7 @@ To verify compatibility install the Sensors app on your phone, place your phone 
 - Ethernet cable
   - I used 32.8ft or 10m direct burial CAT6. A user has reported they successfully used 75ft or 22.9m direct burial CAT6.
   - CAT6 is preferred because of its lower capacitance. CAT5 50ft or 15m [should work](https://www.youtube.com/watch?v=6v1KZBRZRCI). For 100ft you will need an active terminator such as [LTC4311](https://www.youtube.com/watch?v=nhWPxO7jx_o).
+  - If you are expriencing instability with longer distance cable, you may consider test with your i2c frequency to 10kHz via the example subsitiion in yaml
   - Do not use thermostat wire, bell wire, or any other low voltage wire. You will have communication errors or instability. You really need to be using twisted pair cables with proper shielding and lower capacitance such as CAT6.
 - Some way to weather proof the magnetometer. Some options:
   - Adhesive 4:1 heat shrink tubing (this is what I used)
@@ -145,6 +148,8 @@ The ethernet cable has 4 twisted pairs of wires. Use any solid wire color for th
       volume_unit: 'gal'
       i2c_scl: GPIO5  # D1
       i2c_sda: GPIO4  # D2
+      # i2c clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
+      # i2c_frequency: 10kHz
       # Set to false only if needed during manual calibration.
       # Do not keep them at false since these slow down the ESP device
       # and reduce the accuracy during high flow.
@@ -175,6 +180,8 @@ The ethernet cable has 4 twisted pairs of wires. Use any solid wire color for th
       volume_unit: 'gal'
       i2c_scl: GPIO5  # D1
       i2c_sda: GPIO4  # D2
+      # i2c clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
+      # i2c_frequency: 10kHz
       # Set to false only if needed during manual calibration.
       # Do not keep them at false since these slow down the ESP device
       # and reduce the accuracy during high flow.
