@@ -9,7 +9,7 @@ substitutions:
   volume_unit: 'gal'
   i2c_scl: GPIO5  # D1
   i2c_sda: GPIO4  # D2
-  # i2c_frequency: 10kHz # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
+  # i2c_frequency: 10kHz  # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
   # Set to false only if needed during manual calibration.
   # Do not keep them at false since these slow down the ESP device
   # and reduce the accuracy during high flow.
@@ -147,7 +147,7 @@ The ethernet cable has 4 twisted pairs of wires. Use any solid wire color for th
       volume_unit: 'gal'
       i2c_scl: GPIO5  # D1
       i2c_sda: GPIO4  # D2
-      # i2c_frequency: 10kHz # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
+      # i2c_frequency: 10kHz  # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
       # Set to false only if needed during manual calibration.
       # Do not keep them at false since these slow down the ESP device
       # and reduce the accuracy during high flow.
@@ -178,7 +178,7 @@ The ethernet cable has 4 twisted pairs of wires. Use any solid wire color for th
       volume_unit: 'gal'
       i2c_scl: GPIO5  # D1
       i2c_sda: GPIO4  # D2
-      # i2c_frequency: 10kHz # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
+      # i2c_frequency: 10kHz  # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
       # Set to false only if needed during manual calibration.
       # Do not keep them at false since these slow down the ESP device
       # and reduce the accuracy during high flow.
