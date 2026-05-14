@@ -133,6 +133,7 @@ number:
   - platform: template
     id: ${prefix_id}volume_per_half_rotation
     name: ${prefix_name}Volume per half rotation
+    accuracy_decimals: 6
     entity_category: config
     mode: box
     min_value: 0
