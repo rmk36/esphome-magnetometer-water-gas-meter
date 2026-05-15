@@ -7,6 +7,7 @@ TLDR; Add this to your ESPHome device configuration:
 ```yaml
 substitutions:
   volume_unit: 'gal'
+  # volume_per_half_rotation_initial_value: '0'  # Once calibrated, you might consider hardcoding this value in your yaml
   i2c_scl: GPIO5  # D1
   i2c_sda: GPIO4  # D2
   # i2c_frequency: 10kHz  # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
@@ -88,7 +89,8 @@ To verify compatibility install the Sensors app on your phone, place your phone 
 - Ethernet cable
   - I used 32.8ft or 10m direct burial CAT6. A user has reported they successfully used 75ft or 22.9m direct burial CAT6.
   - CAT6 is preferred because of its lower capacitance. CAT5 50ft or 15m [should work](https://www.youtube.com/watch?v=6v1KZBRZRCI). For 100ft you will need an active terminator such as [LTC4311](https://www.youtube.com/watch?v=nhWPxO7jx_o).
-  - If you are experiencing instability with longer distance cable, you may consider test with your i2c frequency to 10kHz via the example subsitiion in yaml
+  - If you are experiencing instability with longer distance cable, you may consider test with your i2c frequency to 10kHz via the example subsitiion in yaml.
+  - Additionally, you may wish to consider reducing the SDL/SCA pull-up resistors to 1.2kΩ (many devices ship with 4.7kΩ pre-installed).  For 3.3V I2C logic, 1kΩ is the minimum.
   - Do not use thermostat wire, bell wire, or any other low voltage wire. You will have communication errors or instability. You really need to be using twisted pair cables with proper shielding and lower capacitance such as CAT6.
 - Some way to weather proof the magnetometer. Some options:
   - Adhesive 4:1 heat shrink tubing (this is what I used)
@@ -145,6 +147,7 @@ The ethernet cable has 4 twisted pairs of wires. Use any solid wire color for th
       # For better accuracy avoid using large units like CCF and m³.
       # You can always change the unit later in Home Assistant.
       volume_unit: 'gal'
+      # volume_per_half_rotation_initial_value: '0'  # Once calibrated, you might consider hardcoding this value in your yaml
       i2c_scl: GPIO5  # D1
       i2c_sda: GPIO4  # D2
       # i2c_frequency: 10kHz  # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
@@ -176,6 +179,7 @@ The ethernet cable has 4 twisted pairs of wires. Use any solid wire color for th
     ```yaml
     substitutions:
       volume_unit: 'gal'
+       # volume_per_half_rotation_initial_value: '0'  # Once calibrated, you might consider hardcoding this value in your yaml
       i2c_scl: GPIO5  # D1
       i2c_sda: GPIO4  # D2
       # i2c_frequency: 10kHz  # Clock frequency can be set lower than the default (50 kHz) to improve i2c stability over longer cable lengths
