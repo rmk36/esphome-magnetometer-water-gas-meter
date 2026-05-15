@@ -303,6 +303,14 @@ For water meters this defaults to `0.01008156 gal` which is for my 3/4" Badge Me
 For gas meters this defaults to `0.125 ft³` which seems to be the most common in US.
 If you have modified the `volume_unit` you have to manually convert this value.
 
+### Volume offset
+
+If you would like your "Total" reading to match the reading displayed on your physical reading, you might consider setting a "Volume Offset":
+<img width="701" height="667" alt="image" src="https://github.com/user-attachments/assets/870d37a7-ee77-4b65-8869-8ef47f1f7c9d" />
+
+1. Set Volume Offset to 0 (if not already set to 0)
+2. Volume Offset = [_Your Actual Meter Reading_] - "Total"
+
 ### Temperature
 
 Only supported if you are using a QMC5883L.
