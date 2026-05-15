@@ -145,7 +145,7 @@ number:
     optimistic: true
     unit_of_measurement: ${volume_unit}
     icon: mdi:rotate-360
-    
+
   - platform: template
     id: ${prefix_id}volume_offset
     name: ${prefix_name}Volume_Offset
