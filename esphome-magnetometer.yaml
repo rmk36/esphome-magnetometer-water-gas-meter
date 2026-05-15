@@ -148,7 +148,7 @@ number:
 
   - platform: template
     id: ${prefix_id}volume_offset
-    name: ${prefix_name}Volume_Offset
+    name: ${prefix_name}Volume Offset
     entity_category: config
     mode: box
     min_value: 0
