@@ -382,12 +382,8 @@ button:
 
 i2c:
   - id: ${prefix_id}i2c_bus
-    scl:
-      number: ${i2c_scl}
-      allow_other_uses: true
-    sda:
-      number: ${i2c_sda}
-      allow_other_uses: true
+    scl: ${i2c_scl}
+    sda: ${i2c_sda}
     frequency: ${i2c_frequency}
     scan: ${i2c_scan}
 
