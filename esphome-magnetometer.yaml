@@ -339,7 +339,7 @@ button:
                      id(${prefix_id}calibrating_axis_z_min), id(${prefix_id}calibrating_axis_z_max), z_range);
           }
           std::string axis_with_largest_range;
-          std::string cal_axis = id(${prefix_id}calibration_axis).state;
+          std::string cal_axis = id(${prefix_id}calibration_axis).current_option();
           float min, max;
           float max_range_found = 0;
           if (cal_axis == "X" || (cal_axis == "Auto" && x_range > min_axis_range && x_range > y_range && x_range > z_range)) {
